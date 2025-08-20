@@ -19,6 +19,12 @@ dnf5 install -y tmux
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+dnf5 config-manager addrepo --from-repofile="https://negativo17.org/repos/fedora-multimedia.repo"
+dnf5 config-manager setopt fedora-multimedia.priority=90
+dnf5 install -y mpv
+dnf5 install -y alsa-utils
+dnf5 config-manager setopt fedora-multimedia.enabled=0
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
