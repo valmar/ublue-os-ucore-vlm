@@ -21,7 +21,7 @@ dnf5 install -y tmux
 
 dnf5 config-manager addrepo --from-repofile="https://negativo17.org/repos/fedora-multimedia.repo"
 dnf5 config-manager setopt fedora-multimedia.priority=90
-dnf5 install -y mpv
+dnf5 install -y mpv-libs
 dnf5 install -y alsa-utils
 dnf5 config-manager setopt fedora-multimedia.enabled=0
 
